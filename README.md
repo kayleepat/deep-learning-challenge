@@ -40,14 +40,20 @@ This project aims to create a deep learning model for Alphabet Soup. It is inten
 The first trial of this model has an accuracy of 72.80%. The goal was to reach an accuracy of 75%, so the following optimization methods were used:
 - Modifying feature variables and removed variables
     - This seems to have had the largest impact on the accuracy of each iteration of the model. While `NAME` was initially dropped, adding it back in increased performance significantly
+
+    ![Dropping Unnecessary Columns](imgs/dropping_columns.png)
+
 - Increasing the amount of hidden layers
     - A third hidden layer was added to one of the model iterations, but was eventually removed due to lack of significant impact
+    ![Modified Layers](imgs/modified_layers.png "Modified Layers")
+
 - Modified bins
     - Changed the bins for `APPLICATION_TYPE` and `CLASSIFICATION` to decrease the amount of data being consolidated into one singular 'other' category
     - Reverted this change due to lack of positive impact
 
 ### Model Performance and Summary
-After several optimization methods were tested, the model was able to achieve an accuracy of 96.83%, which far exceeds the inital goal of 75%. 
+After several optimization methods were tested, the model was able to achieve an accuracy of 96.83%, which far exceeds the inital goal of 75%, however it only managed 68% accuracy on the testing data, which suggests it has been overfit. 
 
 ### Other Options
 While this model is already performing well, it could be further improved by implementing hyperparameter tuning or using a Random Forest Classifier. Random Forests are less prone to overfitting and allow us to view feature importance.
+
